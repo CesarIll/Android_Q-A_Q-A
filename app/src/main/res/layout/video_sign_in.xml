@@ -33,11 +33,11 @@
         app:srcCompat="@drawable/upblogo" />
 
     <EditText
-        android:id="@+id/etEmailAddress"
+        android:id="@+id/txtcodigo"
         android:layout_width="250dp"
         android:layout_height="40dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/transparent_background"
+        android:background="@color/colorTransparent"
         android:ems="10"
         android:hint="Codigo"
         android:inputType="textEmailAddress"
@@ -52,11 +52,11 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/etPassword"
+        android:id="@+id/txtpassword"
         android:layout_width="250dp"
         android:layout_height="40dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/transparent_background"
+        android:background="@color/colorTransparent"
         android:ems="10"
         android:hint="Contraseña"
         android:inputType="textPassword"
@@ -65,7 +65,7 @@
         android:textColorHint="#ffffff"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/txtcodigo" />
 
     <CheckBox
         android:id="@+id/checkBox"
@@ -79,14 +79,14 @@
         android:buttonTint="#ffffff"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toStartOf="@+id/videoView"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/txtpassword" />
 
     <Button
         android:id="@+id/btLogInButton"
         android:layout_width="150dp"
         android:layout_height="35dp"
         android:layout_marginTop="25dp"
-        android:background="@drawable/transparent_background"
+        android:background="@color/colorTransparent"
         android:gravity="center"
         android:text="Login"
         android:textColor="#ffffff"
@@ -99,7 +99,7 @@
         android:layout_width="150dp"
         android:layout_height="35dp"
         android:layout_marginTop="30dp"
-        android:background="@drawable/transparent_background"
+        android:background="@color/colorTransparent"
         android:gravity="center"
         android:text="Login as Guest"
         android:textColor="#ffffff"
