@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
                                                 LoginIntent = new Intent(MainActivity.this, MenuActivity.class);
                                                 startActivity(LoginIntent);
                                             }else{
-                                                Toast.makeText(getApplicationContext()," Usuario Incorrecto ",Toast.LENGTH_LONG).show();
+                                                Toast.makeText(getApplicationContext()," Usuario Incorrecto ",Toast.LENGTH_SHORT).show();
 
 
                                             }
