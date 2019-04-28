@@ -1,6 +1,7 @@
 package com.android_q_a_q_a.proyecto;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.annotation.NonNull;
@@ -12,16 +13,27 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 import android.widget.VideoView;
-
+//menu
+import android.support.v7.widget.CardView;
+import android.widget.GridLayout;
+import android.widget.GridView;
 
 public class MainActivity extends AppCompatActivity {
     // Create a VideoView variable, a MediaPlayer variable, and an int to hold the current
     // video position.
     private VideoView videoBG;
+
     MediaPlayer mMediaPlayer;
+
     int mCurrentVideoPosition;
+
     Button Login,LoginAsGuest ;
+
     Intent LoginIntent,LoginAsGuestIntent;
+
+    //Objeto GridLayout = Menu
+
+    GridLayout menuGrid;
 
 
     @Override
@@ -60,6 +72,13 @@ public class MainActivity extends AppCompatActivity {
                                           }
                                       }
         );
+
+
+
+
+
+
+
 
         Login = findViewById(R.id.btLogInButton);
         LoginAsGuest = findViewById(R.id.btLogInGuestButton);
@@ -109,6 +128,8 @@ public class MainActivity extends AppCompatActivity {
         mMediaPlayer.release();
         mMediaPlayer = null;
     }
+
+
 
     
 }
