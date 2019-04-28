@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
                                      @Override
                                      public void onClick(View view) {
 
-                                         LoginAsGuestIntent = new Intent(MainActivity.this, Menu_AsGuest_Activity.class);
+                                         LoginAsGuestIntent = new Intent(MainActivity.this, ParkActivity.class);
                                          startActivity(LoginAsGuestIntent);
                                      }
                                  }
