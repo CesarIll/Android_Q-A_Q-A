@@ -28,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
 
     int mCurrentVideoPosition;
 
-    Button Login,LoginAsGuest ;
+    Button Login, LoginAsGuest;
 
-    Intent LoginIntent,LoginAsGuestIntent;
+    Intent LoginIntent, LoginAsGuestIntent;
 
     //Objeto GridLayout = Menu
 
@@ -77,11 +77,11 @@ public class MainActivity extends AppCompatActivity {
 
 
         //creando usuarios
-        final String Cristian = "46284";
+        final String cristian = "46284";
         final String cesar = "44925";
-        final String Sergio = "46125";
-        final String Fernanda = "46025";
-        final String passwordd = "pass123";
+        final String sergio = "46125";
+        final String fernanda = "46025";
+        final String password = "pass123";
 
 
 
@@ -98,15 +98,13 @@ public class MainActivity extends AppCompatActivity {
 
                                          String password = ((EditText)findViewById(R.id.txtpassword)).getText().toString();
 
-                                            if(codigo.equals(Cristian)|| codigo.equals(Fernanda)||codigo.equals(cesar)||codigo.equals(Sergio)  && password.equals(passwordd) ){
+                                            if(codigo.equals(cristian)|| codigo.equals(fernanda)||codigo.equals(cesar)||codigo.equals(sergio)  && password.equals(password) ){
 
 
                                                 LoginIntent = new Intent(MainActivity.this, MenuActivity.class);
                                                 startActivity(LoginIntent);
                                             }else{
                                                 Toast.makeText(getApplicationContext()," Usuario Incorrecto ",Toast.LENGTH_SHORT).show();
-
-
                                             }
 
 
@@ -122,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
                                      @Override
                                      public void onClick(View view) {
 
-                                         LoginAsGuestIntent = new Intent(MainActivity.this, Menu_AsGuest_Activity.class);
+                                         LoginAsGuestIntent = new Intent(MainActivity.this, ParkActivity.class);
                                          startActivity(LoginAsGuestIntent);
                                      }
                                  }
