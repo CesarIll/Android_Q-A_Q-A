@@ -17,7 +17,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppThemeNoActionBar">
         <activity android:name=".GradeActivity"></activity>
-        <activity android:name=".ParkActivity" />
+        <activity android:name=".ParkActivity"
+            android:theme="@style/AppTheme"
+            android:label="Estacionamiento"
+            >
+
+        </activity>
         <activity android:name=".LibraryActivity" />
         <activity android:name=".AssistanceActivity" />
         <activity android:name=".Menu_AsGuest_Activity" />
