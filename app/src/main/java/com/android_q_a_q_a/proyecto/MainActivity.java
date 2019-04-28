@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 import android.widget.VideoView;
 //menu
@@ -75,7 +76,12 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+        //creando usuarios
+        final String Cristian = "46284";
+        final String cesar = "44925";
+        final String Sergio = "46125";
+        final String Fernanda = "46025";
+        final String passwordd = "pass123";
 
 
 
@@ -88,9 +94,27 @@ public class MainActivity extends AppCompatActivity {
         Login.setOnClickListener(new View.OnClickListener() {
                                      @Override
                                      public void onClick(View view) {
+                                         String codigo = ((EditText)findViewById(R.id.txtcodigo)).getText().toString();
 
+                                         String password = ((EditText)findViewById(R.id.txtpassword)).getText().toString();
+
+                                            if(codigo.equals(Cristian)|| codigo.equals(Fernanda)||codigo.equals(cesar)||codigo.equals(Sergio)  && password.equals(passwordd) ){
+
+
+                                                LoginIntent = new Intent(MainActivity.this, MenuActivity.class);
+                                                startActivity(LoginIntent);
+                                            }else{
+                                                Toast.makeText(getApplicationContext()," Usuario Incorrecto ",Toast.LENGTH_LONG).show();
+
+
+                                            }
+
+
+
+                                         /*
                                          LoginIntent = new Intent(MainActivity.this, MenuActivity.class);
                                          startActivity(LoginIntent);
+                                     */
                                      }
                                  }
         );
