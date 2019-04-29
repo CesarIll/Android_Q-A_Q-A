@@ -9,6 +9,7 @@ import android.support.v4.app.SharedElementCallback;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,6 +23,9 @@ import android.widget.GridView;
 public class MainActivity extends AppCompatActivity {
     // Create a VideoView variable, a MediaPlayer variable, and an int to hold the current
     // video position.
+
+    View view;
+
     private VideoView videoBG;
 
     MediaPlayer mMediaPlayer;
@@ -96,23 +100,20 @@ public class MainActivity extends AppCompatActivity {
                                      public void onClick(View view) {
                                          String codigo = ((EditText)findViewById(R.id.txtcodigo)).getText().toString();
 
-                                         String password = ((EditText)findViewById(R.id.txtpassword)).getText().toString();
+                                         String passwordd = ((EditText)findViewById(R.id.txtpassword)).getText().toString();
 
-                                            if(codigo.equals(cristian)|| codigo.equals(fernanda)||codigo.equals(cesar)||codigo.equals(sergio)  && password.equals(password) ){
+                                            if(codigo.equals(cristian)|| codigo.equals(fernanda)||codigo.equals(cesar)||codigo.equals(sergio) ){
+                                                if(password.equals(passwordd)){
 
-
-                                                LoginIntent = new Intent(MainActivity.this, MenuActivity.class);
-                                                startActivity(LoginIntent);
+                                                    LoginIntent = new Intent(MainActivity.this, MenuActivity.class);
+                                                    startActivity(LoginIntent);
+                                                }else{
+                                                    ToastPasswordFail();
+                                                }
                                             }else{
-                                                Toast.makeText(getApplicationContext()," Usuario Incorrecto ",Toast.LENGTH_SHORT).show();
+                                                ToastLoginFail();
                                             }
 
-
-
-                                         /*
-                                         LoginIntent = new Intent(MainActivity.this, MenuActivity.class);
-                                         startActivity(LoginIntent);
-                                     */
                                      }
                                  }
         );
@@ -152,6 +153,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void ToastLoginFail(){
 
-    
+        Toast toast = new Toast (this);
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View layout = inflater.inflate(R.layout.login_fail,null);
+        toast.setView(layout);
+        toast.show();
+    }
+
+    public void ToastPasswordFail(){
+
+        Toast toast = new Toast (this);
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View layout = inflater.inflate(R.layout.password_fail,null);
+        toast.setView(layout);
+        toast.show();
+    }
+
+
+
 }

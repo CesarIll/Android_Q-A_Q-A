@@ -1,17 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/colorBackGround"
     tools:context=".AssistanceActivity">
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/upblogo"/>
+
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:id="@+id/btn_QR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Marcar Asistencia"
+        android:textSize="18sp" />
+
 
     <TextView
+        android:layout_centerInParent="true"
+        android:layout_margin="40dp"
+        android:layout_alignParentTop="true"
+        android:id="@+id/resultadoQR"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="ASISTENCIA"
-        android:textSize="50sp"
+        android:layout_height="wrap_content"
+        android:text="Resultado"
         android:gravity="center"
+        android:textSize="22sp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorAccent"
         />
+    <TextView
+        android:id="@+id/txtAsistencia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"/>
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
