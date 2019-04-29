@@ -4,30 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorTransparent"
+    android:background="@color/colorPrimaryDark"
     android:weightSum="10"
     tools:context=".MenuActivity">
 
-    <ImageView
+    <Button
         android:id="@+id/prueba"
-        android:layout_width="match_parent"
+        android:layout_width="130dp"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:contentDescription="App Logo"
-        app:srcCompat="@drawable/upblogo" />
+        android:textSize="23dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="CAMPUS"
+        android:textColor="@color/colorAccent" />
 
+    <ImageView
+        android:id="@+id/negro"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/imagennegra" />
     <ImageView
         android:id="@+id/mapa"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/prueba"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="30dp"
-        android:
-        android:background="@drawable/round_image"
         android:contentDescription="App Logo"
         app:srcCompat="@drawable/mapacampus" />
 
