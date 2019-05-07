@@ -1,6 +1,7 @@
 package com.android_q_a_q_a.proyecto;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -12,6 +13,7 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 import android.widget.VideoView;
@@ -32,9 +34,13 @@ public class MainActivity extends AppCompatActivity {
 
     int mCurrentVideoPosition;
 
-    Button Login, LoginAsGuest;
+    Button login, loginAsGuest;
 
-    Intent LoginIntent, LoginAsGuestIntent;
+    Intent loginIntent, loginAsGuestIntent;
+
+    CheckBox checkBox;
+
+    SharedPreferences sharedPreferences;
 
     //Objeto GridLayout = Menu
 
@@ -45,6 +51,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        sharedPreferences = getSharedPreferences("DatoCheckbox", MODE_PRIVATE);
+        boolean lastCheckBoxValue = sharedPreferences.getBoolean("checkBoxValue", false);
+        if(lastCheckBoxValue) {
+            loginIntent = new Intent(MainActivity.this, MenuActivity.class);
+            startActivity(loginIntent);
+        }
 
         // Hook up the VideoView to our UI.
         videoBG = (VideoView) findViewById(R.id.videoView);
@@ -80,33 +93,38 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        //creando usuarios
+        //Creando usuarios
         final String cristian = "46284";
         final String cesar = "44925";
         final String sergio = "46125";
         final String fernanda = "46025";
-        final String password = "pass123";
+        final String thepassword = "pass123";
 
 
 
+        checkBox = findViewById(R.id.checkBox);
+        login = findViewById(R.id.btLogInButton);
+        loginAsGuest = findViewById(R.id.btLogInGuestButton);
 
-        Login = findViewById(R.id.btLogInButton);
-        LoginAsGuest = findViewById(R.id.btLogInGuestButton);
 
 
-
-        Login.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener() {
                                      @Override
                                      public void onClick(View view) {
                                          String codigo = ((EditText)findViewById(R.id.txtcodigo)).getText().toString();
 
-                                         String passwordd = ((EditText)findViewById(R.id.txtpassword)).getText().toString();
+                                         String password = ((EditText)findViewById(R.id.txtpassword)).getText().toString();
 
                                             if(codigo.equals(cristian)|| codigo.equals(fernanda)||codigo.equals(cesar)||codigo.equals(sergio) ){
-                                                if(password.equals(passwordd)){
-
-                                                    LoginIntent = new Intent(MainActivity.this, MenuActivity.class);
-                                                    startActivity(LoginIntent);
+                                                if(thepassword.equals(password)){
+                                                    if (checkBox.isChecked()) {
+                                                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                                                        editor.putBoolean("checkBoxValue", checkBox.isChecked());
+                                                        editor.apply();
+                                                        editor.commit();
+                                                    }
+                                                    loginIntent = new Intent(MainActivity.this, MenuActivity.class);
+                                                    startActivity(loginIntent);
                                                 }else{
                                                     ToastPasswordFail();
                                                 }
@@ -117,12 +135,12 @@ public class MainActivity extends AppCompatActivity {
                                      }
                                  }
         );
-        LoginAsGuest.setOnClickListener(new View.OnClickListener() {
+        loginAsGuest.setOnClickListener(new View.OnClickListener() {
                                      @Override
                                      public void onClick(View view) {
 
-                                         LoginAsGuestIntent = new Intent(MainActivity.this, ParkActivity.class);
-                                         startActivity(LoginAsGuestIntent);
+                                         loginAsGuestIntent = new Intent(MainActivity.this, ParkActivity.class);
+                                         startActivity(loginAsGuestIntent);
                                      }
                                  }
         );
