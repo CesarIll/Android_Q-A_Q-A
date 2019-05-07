@@ -1,6 +1,7 @@
 package com.android_q_a_q_a.proyecto;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -12,6 +13,7 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 import android.widget.VideoView;
@@ -32,9 +34,13 @@ public class MainActivity extends AppCompatActivity {
 
     int mCurrentVideoPosition;
 
-    Button Login, LoginAsGuest;
+    Button login, loginAsGuest;
 
-    Intent LoginIntent, LoginAsGuestIntent;
+    Intent loginIntent, loginAsGuestIntent;
+
+    CheckBox checkBox;
+
+    SharedPreferences sharedPreferences;
 
     //Objeto GridLayout = Menu
 
@@ -45,6 +51,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        sharedPreferences = getSharedPreferences("DatoCheckbox", MODE_PRIVATE);
+        boolean lastCheckBoxValue = sharedPreferences.getBoolean("checkBoxValue", false);
+        if (lastCheckBoxValue) {
+            loginIntent = new Intent(MainActivity.this, MenuActivity.class);
+            startActivity(loginIntent);
+        }
 
         // Hook up the VideoView to our UI.
         videoBG = (VideoView) findViewById(R.id.videoView);
@@ -64,70 +77,73 @@ public class MainActivity extends AppCompatActivity {
         // Set an OnPreparedListener for our VideoView. For more information about VideoViews,
         // check out the Android Docs: https://developer.android.com/reference/android/widget/VideoView.html
         videoBG.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            @Override
-            public void onPrepared(MediaPlayer mediaPlayer) {
-                mMediaPlayer = mediaPlayer;
-                // We want our video to play over and over so we set looping to true.
-                mMediaPlayer.setLooping(true);
-                // We then seek to the current posistion if it has been set and play the video.
-                if (mCurrentVideoPosition != 0) {
-                    mMediaPlayer.seekTo(mCurrentVideoPosition);
-                    mMediaPlayer.start();
+                                          @Override
+                                          public void onPrepared(MediaPlayer mediaPlayer) {
+                                              mMediaPlayer = mediaPlayer;
+                                              // We want our video to play over and over so we set looping to true.
+                                              mMediaPlayer.setLooping(true);
+                                              // We then seek to the current posistion if it has been set and play the video.
+                                              if (mCurrentVideoPosition != 0) {
+                                                  mMediaPlayer.seekTo(mCurrentVideoPosition);
+                                                  mMediaPlayer.start();
                                               }
                                           }
                                       }
         );
 
 
-
-        //creando usuarios
+        //Creando usuarios
         final String cristian = "46284";
         final String cesar = "44925";
         final String sergio = "46125";
         final String fernanda = "46025";
+
+        final String thepassword = "pass123";
         final String rachael = "52139";
         final String junior = "52305";
 
-        final String password = "pass123";
+
+        checkBox = findViewById(R.id.checkBox);
+        login = findViewById(R.id.btLogInButton);
+        loginAsGuest = findViewById(R.id.btLogInGuestButton);
 
 
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String codigo = ((EditText) findViewById(R.id.txtcodigo)).getText().toString();
+
+                String password = ((EditText) findViewById(R.id.txtpassword)).getText().toString();
 
 
-        Login = findViewById(R.id.btLogInButton);
-        LoginAsGuest = findViewById(R.id.btLogInGuestButton);
+                if (codigo.equals(cristian) || codigo.equals(fernanda) || codigo.equals(cesar) || codigo.equals(sergio)) {
+                    if (thepassword.equals(password)) {
+                        if (checkBox.isChecked()) {
+                            SharedPreferences.Editor editor = sharedPreferences.edit();
+                            editor.putBoolean("checkBoxValue", checkBox.isChecked());
+                            editor.apply();
+                            editor.commit();
+                        }
+                        loginIntent = new Intent(MainActivity.this, MenuActivity.class);
+                        startActivity(loginIntent);
+                    } else {
+                        ToastPasswordFail();
+                    }
+                } else {
+                    ToastLoginFail();
+                }
 
+            }
+        })
+        ;
+        loginAsGuest.setOnClickListener(new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View view) {
 
-
-        Login.setOnClickListener(new View.OnClickListener() {
-                                     @Override
-                                     public void onClick(View view) {
-                                         String codigo = ((EditText)findViewById(R.id.txtcodigo)).getText().toString();
-
-                                         String passwordd = ((EditText)findViewById(R.id.txtpassword)).getText().toString();
-
-                                            if(codigo.equals(cristian)||codigo.equals(junior)|| codigo.equals(fernanda)||codigo.equals(cesar)||codigo.equals(sergio)||codigo.equals(rachael) ){
-                                                if(password.equals(passwordd)){
-
-                                                    LoginIntent = new Intent(MainActivity.this, MenuActivity.class);
-                                                    startActivity(LoginIntent);
-                                                }else{
-                                                    ToastPasswordFail();
-                                                }
-                                            }else{
-                                                ToastLoginFail();
+                                                loginAsGuestIntent = new Intent(MainActivity.this, ParkActivity.class);
+                                                startActivity(loginAsGuestIntent);
                                             }
-
-                                     }
-                                 }
-        );
-        LoginAsGuest.setOnClickListener(new View.OnClickListener() {
-                                     @Override
-                                     public void onClick(View view) {
-
-                                         LoginAsGuestIntent = new Intent(MainActivity.this, ParkActivity.class);
-                                         startActivity(LoginAsGuestIntent);
-                                     }
-                                 }
+                                        }
         );
 
 
@@ -140,6 +156,7 @@ public class MainActivity extends AppCompatActivity {
         mCurrentVideoPosition = mMediaPlayer.getCurrentPosition();
         videoBG.pause();
     }
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -156,24 +173,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void ToastLoginFail(){
+    public void ToastLoginFail() {
 
-        Toast toast = new Toast (this);
+        Toast toast = new Toast(this);
         LayoutInflater inflater = LayoutInflater.from(this);
-        View layout = inflater.inflate(R.layout.login_fail,null);
+        View layout = inflater.inflate(R.layout.login_fail, null);
         toast.setView(layout);
         toast.show();
     }
 
-    public void ToastPasswordFail(){
+    public void ToastPasswordFail() {
 
-        Toast toast = new Toast (this);
+        Toast toast = new Toast(this);
         LayoutInflater inflater = LayoutInflater.from(this);
-        View layout = inflater.inflate(R.layout.password_fail,null);
+        View layout = inflater.inflate(R.layout.password_fail, null);
         toast.setView(layout);
         toast.show();
     }
-
 
 
 }
