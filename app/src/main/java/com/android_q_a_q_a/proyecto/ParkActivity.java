@@ -5,16 +5,26 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.PopupMenu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.ScaleGestureDetector;
 import android.widget.ImageView;
 import android.widget.Toast;
 public class ParkActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
     ImageView mapa;
-    @Override
+    ScaleGestureDetector sgd;
+    private float xBegin = 0;
+    private float yBegin = 0;
+
+        @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_park);
         mapa = findViewById(R.id.mapa);
         mapa.setImageResource(R.drawable.upblogo);
+        xBegin = mapa.getScaleX();
+        yBegin = mapa.getScaleY();
+        sgd = new ScaleGestureDetector(this, new ScaleListener(mapa));
+
     }
 
     public void mostrarPopup (android.view.View v){
@@ -34,10 +44,14 @@ public class ParkActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                 mapa.setImageResource(R.drawable.mapacbba);
                 return true;
             case R.id.item3:
-                Toast.makeText(this, "¡Estamos trabajando en el diseño de Posgrado-La Paz, gracias por tu paciencia!", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "¡Estamos trabajando en el diseño de Posgrado-La Paz, ¡gracias por tu paciencia!", Toast.LENGTH_LONG).show();
                 return true;
             default:
                 return false;
         }
+    }
+    public boolean onTouchEvent (MotionEvent event){
+            sgd.onTouchEvent(event);
+            return super.onTouchEvent(event);
     }
 }
