@@ -47,8 +47,6 @@ public class LibraryActivity extends AppCompatActivity {
 
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
     }
-
 
 }

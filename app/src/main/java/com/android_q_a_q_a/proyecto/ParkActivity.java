@@ -9,22 +9,17 @@ import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import uk.co.senab.photoview.PhotoViewAttacher;
+
 public class ParkActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
     ImageView mapa;
-    ScaleGestureDetector sgd;
-    private float xBegin = 0;
-    private float yBegin = 0;
-
         @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_park);
         mapa = findViewById(R.id.mapa);
         mapa.setImageResource(R.drawable.upblogo);
-        xBegin = mapa.getScaleX();
-        yBegin = mapa.getScaleY();
-        sgd = new ScaleGestureDetector(this, new ScaleListener(mapa));
-
     }
 
     public void mostrarPopup (android.view.View v){
@@ -49,9 +44,5 @@ public class ParkActivity extends AppCompatActivity implements PopupMenu.OnMenuI
             default:
                 return false;
         }
-    }
-    public boolean onTouchEvent (MotionEvent event){
-            sgd.onTouchEvent(event);
-            return super.onTouchEvent(event);
     }
 }
