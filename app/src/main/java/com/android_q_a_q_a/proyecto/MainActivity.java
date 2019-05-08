@@ -22,6 +22,9 @@ import android.support.v7.widget.CardView;
 import android.widget.GridLayout;
 import android.widget.GridView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class MainActivity extends AppCompatActivity {
     // Create a VideoView variable, a MediaPlayer variable, and an int to hold the current
     // video position.
@@ -45,6 +48,13 @@ public class MainActivity extends AppCompatActivity {
     //Objeto GridLayout = Menu
 
     GridLayout menuGrid;
+
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference("message");
+
+    private String docente;
+
+
 
 
     @Override
