@@ -7,6 +7,16 @@
     android:background="@color/colorPrimaryDark"
     android:weightSum="10"
     tools:context=".CampusActivity">
+    <ImageView
+        android:id="@+id/upblogo"
+        app:srcCompat="@drawable/upblogo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/campus"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="30dp"/>
 
     <Button
         android:id="@+id/campus"
@@ -40,17 +50,6 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="30dp" />
-    <ImageView
-        android:id="@+id/upblogo"
-        app:srcCompat="@drawable/upblogo"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/campus"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginBottom="30dp"/>
-
     <ImageButton
         android:layout_width="80dp"
         android:layout_alignParentEnd="true"
