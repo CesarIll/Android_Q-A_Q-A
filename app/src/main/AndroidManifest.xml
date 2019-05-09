@@ -27,7 +27,7 @@
 
         </activity>
         <activity android:name=".ParkActivity"
-            android:label="PARQUEO"
+            android:label="LOCACIÓN"
             android:theme="@style/AppTheme">
 
             </activity>
