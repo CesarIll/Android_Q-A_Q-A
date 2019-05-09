@@ -20,9 +20,9 @@ public class CampusActivity extends AppCompatActivity implements PopupMenu.OnMen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_campus);
-        //parkButton.setEnabled(false);
         mapa = findViewById(R.id.mapa);
                 parkButton = findViewById(R.id.parkbutton);
+            parkButton.setEnabled(false);
         parkButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,12 +44,15 @@ public class CampusActivity extends AppCompatActivity implements PopupMenu.OnMen
         switch (item.getItemId()) {
             case R.id.item1:
                mapa.setImageResource(R.drawable.mapacampus);
+                parkButton.setEnabled(true);
                 return true;
             case R.id.item2:
                 mapa.setImageResource(R.drawable.mapacbba);
+                parkButton.setEnabled(false);
                 return true;
             case R.id.item3:
                 Toast.makeText(this, "¡Estamos trabajando en el diseño de Posgrado-La Paz, ¡gracias por tu paciencia!", Toast.LENGTH_LONG).show();
+                parkButton.setEnabled(false);
                 return true;
             default:
                 return false;
