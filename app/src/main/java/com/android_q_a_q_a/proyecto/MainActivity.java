@@ -58,10 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences("DatoCheckbox", MODE_PRIVATE);
         boolean lastCheckBoxValue = sharedPreferences.getBoolean("checkBoxValue", false);
-        if (lastCheckBoxValue) {
-            loginIntent = new Intent(MainActivity.this, MenuActivity.class);
-            startActivity(loginIntent);
-        }
+
 
         // Hook up the VideoView to our UI.
         videoBG = (VideoView) findViewById(R.id.videoView);
@@ -77,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         videoBG.setVideoURI(uri);
         // Start the VideoView
         videoBG.start();
+
 
         // Set an OnPreparedListener for our VideoView. For more information about VideoViews,
         // check out the Android Docs: https://developer.android.com/reference/android/widget/VideoView.html
@@ -94,6 +92,11 @@ public class MainActivity extends AppCompatActivity {
                                           }
                                       }
         );
+
+        if (lastCheckBoxValue) {
+            loginIntent = new Intent(MainActivity.this, MenuActivity.class);
+            startActivity(loginIntent);
+        }
 
 
         //Creando usuarios
