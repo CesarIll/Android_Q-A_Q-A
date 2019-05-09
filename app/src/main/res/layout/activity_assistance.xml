@@ -7,11 +7,8 @@
     android:gravity="center"
     android:orientation="vertical"
     android:background="@color/colorBackGround"
+    android:weightSum="15"
     tools:context=".AssistanceActivity">
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/upblogo"/>
 
 
     <Button
@@ -43,5 +40,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/colorAccent"/>
+
+    <LinearLayout
+        android:background="@drawable/bg_calen"
+        android:layout_marginTop="48dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content">
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="wrap_content"
+            android:layout_height="320dp">
+
+        </CalendarView>
+
+    </LinearLayout>
+    <TextView
+       android:textColor="@color/ic_launcher_background"
+        android:layout_gravity="center"
+        android:text="                            Faltas Restantes = 4"
+        android:layout_marginTop="30dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="#FFFF"/>
 
 </LinearLayout>

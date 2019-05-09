@@ -21,10 +21,26 @@
 
 
         <activity android:name=".ScanCodeActivity" />
-        <activity android:name=".GradeActivity" />
-        <activity android:name=".ParkActivity" />
-        <activity android:name=".LibraryActivity" />
-        <activity android:name=".AssistanceActivity" />
+        <activity android:name=".GradeActivity"
+            android:label="CALIFICACIONES"
+            android:theme="@style/AppTheme">
+
+        </activity>
+        <activity android:name=".ParkActivity"
+            android:label="PARQUEO"
+            android:theme="@style/AppTheme">
+
+            </activity>
+        <activity android:name=".LibraryActivity"
+            android:label="BIBLIOTECA"
+            android:theme="@style/AppTheme">
+
+        </activity>
+        <activity android:name=".AssistanceActivity"
+            android:label="ASISTENCIA"
+            android:theme="@style/AppTheme">
+
+        </activity>
         <activity android:name=".Menu_AsGuest_Activity" />
         <activity android:name=".MenuActivity" />
         <activity

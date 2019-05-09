@@ -1,29 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GradeActivity"
+    android:background="@color/colorPrimary"
+    android:gravity="center"
     android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/codigo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <ListView
+    android:id="@+id/listViewGrades"
+    android:layout_width="match_parent"
+     android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/nota"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/round_table"
+        android:layout_marginHorizontal="35dp"
+        android:layout_marginVertical="40dp">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Enviar"
-        android:onClick="escribirNotas"/>
+        <TextView
+            android:id="@+id/materia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:paddingStart="14dp"
+            android:text="materia"
+            android:textColor="@color/colorAccent"
+            android:textSize="19dp" />
 
+        <TextView
+            android:id="@+id/docente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/materia"
+            android:paddingStart="13dp"
+            android:text="docente"
+            android:textColor="@color/colorAccent"
+            android:textSize="17dp" />
 
+        <TextView
+            android:id="@+id/horario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/docente"
+            android:paddingStart="14dp"
+            android:text="horario"
+            android:textColor="@color/colorAccent"
+            android:textSize="15dp" />
 
-</LinearLayout>
+        <TableLayout
+            android:layout_width="224dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="end">
+
+            <TableRow android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/colorAccent"
+                    android:text="Primero" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/colorAccent"
+                    android:text="Segundo" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/colorAccent"
+                    android:text="Tercero" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/colorAccent"
+                    android:text="Final" />
+            </TableRow>
+
+            <TableRow android:layout_weight="3">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/colorAccent"
+                    android:text="Nota1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:gravity="center"
+                    android:text="Nota2" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:gravity="center"
+                    android:text="Nota3" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:gravity="center"
+                    android:text="Nota4" />
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+</ListView>
+    </LinearLayout>
