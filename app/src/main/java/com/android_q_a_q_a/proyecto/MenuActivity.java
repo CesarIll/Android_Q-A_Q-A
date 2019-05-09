@@ -1,13 +1,11 @@
 package com.android_q_a_q_a.proyecto;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.GridLayout;
-import android.widget.Toast;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -44,7 +42,7 @@ public class MenuActivity extends AppCompatActivity {
                         intent.putExtra("info", "Accediendo asistencia....." );
                         startActivity(intent);
                     }else if(cardIndex == 1 ){
-                        intent = new Intent(MenuActivity.this, ParkActivity.class);
+                        intent = new Intent(MenuActivity.this, CampusActivity.class);
                         intent.putExtra("info", "Accediendo Parqueo....." );
                         startActivity(intent);
 
