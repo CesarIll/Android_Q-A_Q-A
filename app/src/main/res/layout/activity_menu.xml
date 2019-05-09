@@ -100,7 +100,8 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:src="@drawable/parqueo"
+                    android:src="@drawable/maps"
+                    android:layout_marginTop="20dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
