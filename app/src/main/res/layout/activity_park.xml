@@ -1,10 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ParkActivity">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/campuslp"
+        tools:context=".CampusActivity">
+
+        <Button
+            android:layout_width="35dp"
+            android:id="@+id/parkOne"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/fullpark"
+            android:gravity="center"
+            android:layout_marginEnd="247dp" />
+
+    <Button
+        android:id="@+id/parkTwo"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/parkOne"
+        android:layout_alignParentEnd="true"
+         android:text="3"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="185dp"
+        android:background="@drawable/not_full_park" />
+
+    <Button
+        android:id="@+id/parkTree"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/parkTwo"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="165dp"
+        android:background="@drawable/not_full_park"
+        android:text="1" />
+
+    <Button
+        android:id="@+id/parkFour"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/parkTree"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="144dp"
+        android:background="@drawable/fullpark" />
+
+    <Button
+        android:id="@+id/parkFive"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/parkFour"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="77dp"
+        android:layout_marginEnd="112dp"
+        android:background="@drawable/fullpark" />
+
+    <Button
+        android:id="@+id/parkSix"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/parkFive"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="104dp"
+        android:background="@drawable/not_full_park"
+        android:text="12" />
+
+    <Button
+        android:id="@+id/parkSeven"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/parkSix"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="107dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="29dp"
+        android:background="@drawable/not_full_park"
+        android:text="10" />
 
 
-</android.support.constraint.ConstraintLayout>
+
+
+</RelativeLayout>
