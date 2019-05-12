@@ -13,8 +13,8 @@
 
         <TextView
             android:id="@+id/materia"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="115sp"
+            android:layout_height="30sp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:paddingStart="12dp"
@@ -23,8 +23,8 @@
 
         <TextView
             android:id="@+id/docente"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="115sp"
+            android:layout_height="30sp"
             android:layout_below="@+id/materia"
             android:paddingStart="13dp"
             android:textColor="@color/colorAccent"
@@ -32,8 +32,8 @@
 
         <TextView
             android:id="@+id/horario"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="115sp"
+            android:layout_height="10sp"
             android:layout_below="@+id/docente"
             android:paddingStart="14dp"
             android:textColor="@color/colorAccent"

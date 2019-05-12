@@ -40,7 +40,7 @@ public class GradeAdapter extends RecyclerView.Adapter<GradeAdapter.GradeViewHol
         gradeViewHolder.textView3.setText(this.notas.get(i).getNota1());
         gradeViewHolder.textView4.setText(this.notas.get(i).getNota2());
         gradeViewHolder.textView5.setText(this.notas.get(i).getNota3());
-        gradeViewHolder.textView6.setText(this.notas.get(i).getNotaFinal());
+        //gradeViewHolder.textView6.setText(this.notas.get(i).getNotaFinal());
     }
 
     @Override

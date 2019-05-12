@@ -11,10 +11,7 @@ import com.android_q_a_q_a.proyecto.model.Nota;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -32,27 +29,27 @@ public class GradeActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.listViewGrades);
 
+        List<Nota> notaList = new LinkedList<>();
 
-
-        //notaList.add(new Nota("Matemáticas para ingeniería I","Msc. Ariel Urquidi","B", null,null ,null));
-        //notaList.add(new Nota("","","","30", "70", "85"));
-        //notaList.add(new Nota("Algorítmica I","Alexis Marechal, PhD","", null,null ,null));
-        //notaList.add(new Nota("","","", "88", "100", "65"));
-        //notaList.add(new Nota("","","", "55", "23", "100"));
-        //notaList.add(new Nota("","","", "34", "90", "89"));
-        //notaList.add(new Nota("","","", "76", "88", "79"));
-        //notaList.add(new Nota("","","", null,null ,null));
-        //notaList.add(new Nota("","","", null,null ,null));
-        //notaList.add(new Nota("","","", "77", "45", "51"));
-        //notaList.add(new Nota("","","", null,null ,null));
-        //notaList.add(new Nota("","","", "66", "55", "78"));
-        //notaList.add(new Nota("","","", "89", "87", "88"));
-        //notaList.add(new Nota("","","", "99", "100", "100"));
-        //notaList.add(new Nota("","","", null,null ,null));;
+        notaList.add(new Nota("Matemáticas para ingeniería I","Msc. Ariel Urquidi","B", "0","0" ,"0"));
+        notaList.add(new Nota("","","","30", "70", "85"));
+        notaList.add(new Nota("Algorítmica I","Alexis Marechal, PhD","", "0","0" ,"0"));
+        notaList.add(new Nota("","","", "88", "100", "65"));
+        notaList.add(new Nota("","","", "55", "23", "100"));
+        notaList.add(new Nota("","","", "34", "90", "89"));
+        notaList.add(new Nota("","","", "76", "88", "79"));
+        notaList.add(new Nota("","","", "0","0" ,"0"));
+        notaList.add(new Nota("","","", "0","0" ,"0"));
+        notaList.add(new Nota("","","", "77", "45", "51"));
+        notaList.add(new Nota("","","", "0","0" ,"0"));
+        notaList.add(new Nota("","","", "66", "55", "78"));
+        notaList.add(new Nota("","","", "89", "87", "88"));
+        notaList.add(new Nota("","","", "99", "100", "100"));
+        notaList.add(new Nota("","","", "0","0" ,"0"));
 
         controller = new DbController(this, "Notas.db", null, 1);
-        adapter = new GradeAdapter(this, new LinkedList<Nota>());
-        updateList();
+        adapter = new GradeAdapter(this, notaList);
+        //updateList();
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }

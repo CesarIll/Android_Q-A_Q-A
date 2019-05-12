@@ -160,8 +160,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         // Capture the current video position and pause the video.
-        //mCurrentVideoPosition = mMediaPlayer.getCurrentPosition();
-        videoBG.pause();
+        if (mMediaPlayer != null) {
+            mCurrentVideoPosition = mMediaPlayer.getCurrentPosition();
+            videoBG.pause();
+        }
+
     }
 
     @Override
