@@ -14,30 +14,37 @@
         <TextView
             android:id="@+id/materia"
             android:layout_width="115sp"
-            android:layout_height="30sp"
+            android:layout_height="25sp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:paddingStart="12dp"
             android:textColor="@color/colorAccent"
-            android:textSize="19dp" />
+            android:textSize="19dp"
+            android:singleLine="true"
+            android:ellipsize="marquee"/>
 
         <TextView
             android:id="@+id/docente"
             android:layout_width="115sp"
-            android:layout_height="30sp"
+            android:layout_height="25sp"
             android:layout_below="@+id/materia"
             android:paddingStart="13dp"
             android:textColor="@color/colorAccent"
-            android:textSize="17dp" />
+            android:textSize="17dp"
+            android:singleLine="true"
+            android:ellipsize="marquee"/>
 
         <TextView
             android:id="@+id/horario"
             android:layout_width="115sp"
-            android:layout_height="10sp"
+            android:layout_height="20sp"
             android:layout_below="@+id/docente"
             android:paddingStart="14dp"
             android:textColor="@color/colorAccent"
-            android:textSize="15dp" />
+            android:textSize="15dp"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            />
 
         <TableLayout
             android:layout_width="224dp"

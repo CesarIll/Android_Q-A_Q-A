@@ -6,9 +6,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
+import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android_q_a_q_a.proyecto.GradeActivity;
 import com.android_q_a_q_a.proyecto.R;
 import com.android_q_a_q_a.proyecto.model.Nota;
 
@@ -67,6 +70,22 @@ public class GradeAdapter extends RecyclerView.Adapter<GradeAdapter.GradeViewHol
             this.textView4 = itemView.findViewById(R.id.nota2);
             this.textView5 = itemView.findViewById(R.id.nota3);
             this.textView6 = itemView.findViewById(R.id.notaFinal);
+
+            textView.setSelected(true);
+            textView1.setSelected(true);
+            textView2.setSelected(true);
+
+            //TranslateAnimation animation = new TranslateAnimation(0.0f, 50.0f, 0.0f, 0.0f); //
+            //animation.setDuration(1500);
+            //animation.setRepeatCount(Integer.MAX_VALUE);
+            //animation.setRepeatMode(2);
+            //animation.setFillAfter(true);
+            //textView.startAnimation(AnimationUtils.loadAnimation(context, R.anim.text));
+            //textView1.startAnimation(AnimationUtils.loadAnimation(context, R.anim.text));
+            //textView2.startAnimation(AnimationUtils.loadAnimation(context, R.anim.text));
+            //textView.startAnimation(animation);
+            //textView1.startAnimation(animation);
+            //textView2.startAnimation(animation);
         }
     }
 

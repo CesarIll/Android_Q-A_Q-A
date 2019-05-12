@@ -17,32 +17,45 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppThemeNoActionBar">
-        <activity android:name=".ParkActivity"></activity>
-        <activity android:name=".ScanCodeActivity" />
+        <activity
+            android:name=".ParkActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ScanCodeActivity"
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".GradeActivity"
             android:label="CALIFICACIONES"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
+        </activity>
         <activity
             android:name=".CampusActivity"
             android:label="LOCACIÓN"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
+        </activity>
         <activity
             android:name=".LibraryActivity"
             android:label="BIBLIOTECA"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".AssistanceActivity"
             android:label="ASISTENCIA"
-            android:theme="@style/AppTheme"></activity>
-        <activity android:name=".Menu_AsGuest_Activity" />
-        <activity android:name=".MenuActivity" />
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Menu_AsGuest_Activity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".MenuActivity"
+            android:screenOrientation="portrait">
+        </activity>
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppThemeNoActionBar">
+            android:theme="@style/AppThemeNoActionBar"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
