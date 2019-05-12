@@ -8,37 +8,35 @@
         tools:context=".ParkActivity">
 
         <Button
-            android:layout_width="35dp"
             android:id="@+id/parkOne"
+            android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="21dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginStart="129sp"
+            android:layout_marginTop="19sp"
             android:background="@drawable/fullpark"
             android:gravity="center"
-            android:layout_marginEnd="247dp" />
+            android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/parkTwo"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_below="@+id/parkOne"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-         android:text="3"
-        android:layout_marginTop="53dp"
-        android:layout_marginEnd="185dp"
-        android:background="@drawable/not_full_park" />
+        android:layout_marginTop="109sp"
+        android:layout_marginEnd="187sp"
+        android:background="@drawable/not_full_park"
+        android:text="3" />
 
     <Button
         android:id="@+id/parkTree"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_below="@+id/parkTwo"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="19dp"
-        android:layout_marginEnd="165dp"
+        android:layout_marginTop="157sp"
+        android:layout_marginEnd="164sp"
         android:background="@drawable/not_full_park"
         android:text="1" />
 
@@ -46,30 +44,31 @@
         android:id="@+id/parkFour"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_below="@id/parkTree"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="144dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="216sp"
+        android:layout_marginEnd="145sp"
         android:background="@drawable/fullpark" />
 
     <Button
         android:id="@+id/parkFive"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_below="@id/parkFour"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="77dp"
-        android:layout_marginEnd="112dp"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="110sp"
         android:background="@drawable/fullpark" />
 
     <Button
         android:id="@+id/parkSix"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_below="@+id/parkFive"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="140dp"
-        android:layout_marginEnd="104dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="91sp"
+        android:layout_marginBottom="259sp"
         android:background="@drawable/not_full_park"
         android:text="12" />
 
@@ -77,11 +76,11 @@
         android:id="@+id/parkSeven"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_below="@+id/parkSix"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="107dp"
-        android:layout_marginEnd="130dp"
-        android:layout_marginBottom="29dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="130sp"
+        android:layout_marginBottom="28sp"
         android:background="@drawable/not_full_park"
         android:text="10" />
 
