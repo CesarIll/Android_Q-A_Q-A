@@ -19,8 +19,8 @@
             android:ellipsize="marquee"
             android:paddingStart="12dp"
             android:singleLine="true"
-            android:textColor="@color/colorAccent"
-            android:textSize="19dp" />
+            android:textColor="@color/white"
+            android:textSize="10dp" />
 
         <TextView
             android:id="@+id/docente"
@@ -30,8 +30,8 @@
             android:ellipsize="marquee"
             android:paddingStart="13dp"
             android:singleLine="true"
-            android:textColor="@color/colorAccent"
-            android:textSize="17dp" />
+            android:textColor="@color/white"
+            android:textSize="10dp" />
 
         <TextView
             android:id="@+id/horario"
@@ -41,7 +41,7 @@
             android:ellipsize="marquee"
             android:paddingStart="14dp"
             android:singleLine="true"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/white"
             android:textSize="15dp" />
 
         <TableLayout
@@ -59,7 +59,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="Primero"
-                    android:textColor="@color/colorAccent" />
+                    android:textColor="@color/white" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -67,7 +67,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="Segundo"
-                    android:textColor="@color/colorAccent" />
+                    android:textColor="@color/white" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -75,7 +75,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="Tercero"
-                    android:textColor="@color/colorAccent" />
+                    android:textColor="@color/white" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -83,7 +83,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="Final"
-                    android:textColor="@color/colorAccent" />
+                    android:textColor="@color/white" />
             </TableRow>
 
             <TableRow android:layout_weight="3">
@@ -94,7 +94,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textColor="@color/colorAccent" />
+                    android:textColor="@color/white" />
 
                 <TextView
                     android:id="@+id/nota2"
@@ -102,7 +102,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textColor="@color/colorAccent" />
+                    android:textColor="@color/white" />
 
                 <TextView
                     android:id="@+id/nota3"
@@ -110,7 +110,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textColor="@color/colorAccent" />
+                    android:textColor="@color/white" />
 
                 <TextView
                     android:id="@+id/notaFinal"
@@ -118,7 +118,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textColor="@color/colorAccent" />
+                    android:textColor="@color/white" />
             </TableRow>
         </TableLayout>
     </RelativeLayout>

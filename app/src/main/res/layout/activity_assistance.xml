@@ -13,10 +13,10 @@
 
     <Button
         android:layout_marginTop="20dp"
-        android:background="@drawable/round_button"
+        android:background="#ffd740"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
-        android:textColor="@color/colorAccent"
+        android:textColor="#000"
         android:id="@+id/btn_QR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,13 +36,14 @@
         android:gravity="center"
         android:textSize="22sp"
         android:layout_marginTop="20dp"
-        android:textColor="@color/colorAccent"
+        android:textColor="#ffff"
         />
+
     <TextView
         android:id="@+id/txtAsistencia"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorAccent"/>
+        android:textColor="@color/white"/>
 
     <LinearLayout
         android:background="@drawable/bg_calen"

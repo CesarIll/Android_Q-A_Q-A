@@ -29,7 +29,7 @@
         android:background="?android:attr/selectableItemBackground"
         android:text="CAMPUS"
         android:onClick="mostrarPopup"
-        android:textColor="@color/colorAccent" />
+        android:textColor="@color/white" />
 
     <ImageView
         android:id="@+id/negro"
