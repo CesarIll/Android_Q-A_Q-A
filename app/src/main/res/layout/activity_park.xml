@@ -9,25 +9,26 @@
 
         <Button
             android:id="@+id/parkOne"
+            android:onClick="parking"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_alignParentTop="true"
             android:layout_marginStart="129sp"
             android:layout_marginTop="19sp"
-            android:background="@drawable/fullpark"
+            android:background="@drawable/not_full_park"
             android:gravity="center"
             android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/parkTwo"
         android:layout_width="35dp"
+        android:onClick="parking"
         android:layout_height="35dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="109sp"
         android:layout_marginEnd="187sp"
-        android:background="@drawable/not_full_park"
-        android:text="3" />
+        android:background="@drawable/not_full_park" />
 
     <Button
         android:id="@+id/parkThree"
@@ -37,8 +38,8 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="157sp"
         android:layout_marginEnd="164sp"
-        android:background="@drawable/not_full_park"
-        android:text="1" />
+        android:onClick="parking"
+        android:background="@drawable/not_full_park" />
 
     <Button
         android:id="@+id/parkFour"
@@ -49,7 +50,8 @@
         android:layout_centerInParent="true"
         android:layout_marginTop="216sp"
         android:layout_marginEnd="145sp"
-        android:background="@drawable/fullpark" />
+        android:onClick="parking"
+        android:background="@drawable/not_full_park" />
 
     <Button
         android:id="@+id/parkFive"
@@ -58,7 +60,8 @@
         android:layout_alignParentEnd="true"
         android:layout_centerInParent="true"
         android:layout_marginEnd="110sp"
-        android:background="@drawable/fullpark" />
+        android:onClick="parking"
+        android:background="@drawable/not_full_park" />
 
     <Button
         android:id="@+id/parkSix"
@@ -69,8 +72,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginEnd="91sp"
         android:layout_marginBottom="259sp"
-        android:background="@drawable/not_full_park"
-        android:text="12" />
+        android:onClick="parking"
+        android:background="@drawable/not_full_park" />
 
     <Button
         android:id="@+id/parkSeven"
@@ -81,6 +84,6 @@
         android:layout_centerVertical="true"
         android:layout_marginEnd="130sp"
         android:layout_marginBottom="28sp"
-        android:background="@drawable/not_full_park"
-        android:text="10" />
+        android:onClick="parking"
+        android:background="@drawable/not_full_park" />
 </RelativeLayout>
