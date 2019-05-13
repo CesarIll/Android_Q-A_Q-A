@@ -16,6 +16,7 @@
             android:layout_marginTop="19sp"
             android:background="@drawable/fullpark"
             android:gravity="center"
+            android:onClick="psarking"
             android:layout_alignParentStart="true" />
 
     <Button
@@ -30,7 +31,7 @@
         android:text="3" />
 
     <Button
-        android:id="@+id/parkTree"
+        android:id="@+id/parkThree"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_alignParentTop="true"

@@ -201,5 +201,7 @@ public class MainActivity extends AppCompatActivity {
         toast.show();
     }
 
-
+    @Override
+    public void onBackPressed() {
+    }
 }
