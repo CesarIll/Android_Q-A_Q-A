@@ -13,7 +13,7 @@
 
     <Button
         android:layout_marginTop="20dp"
-        android:background="#ffd740"
+        android:background="@color/colorPrimary"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
         android:textColor="#000"
