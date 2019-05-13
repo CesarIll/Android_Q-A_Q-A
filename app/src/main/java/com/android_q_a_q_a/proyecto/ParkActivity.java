@@ -248,12 +248,12 @@ public class ParkActivity extends AppCompatActivity {
                     Toast.makeText(this, "Todos los parqueos aquí están ocupados", Toast.LENGTH_SHORT).show();
                 } else {
                     cs7 = buttonseven.getText();
-                    int number7 = Integer.parseInt(cs1.toString());
+                    int number7 = Integer.parseInt(cs7.toString());
                     if (number7 > 0) {
                         number7--;
                         String sNumber = Integer.toString(number7);
                         cs7 = sNumber;
-                        buttonseven.setText(cs1);
+                        buttonseven.setText(cs7);
                         Toast.makeText(this, "Espacio ocupado", Toast.LENGTH_SHORT).show();
                         if (number7 == 0) {
                             Toast.makeText(this, "¡Ocupaste el último espacio!", Toast.LENGTH_SHORT).show();
