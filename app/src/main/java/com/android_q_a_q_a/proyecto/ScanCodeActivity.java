@@ -19,11 +19,13 @@ public class ScanCodeActivity extends AppCompatActivity  implements ZXingScanner
     CalendarView calendarView;
     String verdad = "SiMarcoAsistencia";
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ScannerView = new ZXingScannerView(this);
         setContentView(ScannerView);
+        calendarView = findViewById(R.id.calendarView);
 
 
     }
