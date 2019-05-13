@@ -4,26 +4,14 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.animation.AnimationUtils;
-import android.view.animation.TranslateAnimation;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.android_q_a_q_a.proyecto.GradeActivity;
-import com.android_q_a_q_a.proyecto.R;
-import com.android_q_a_q_a.proyecto.model.Nota;
-
-import java.util.List;
-
-public class GradeAdapter extends RecyclerView.Adapter<GradeAdapter.GradeViewHolder> {
-
+public class GradeAdapter {
+/*-
     private Context context;
-    private List<Nota> notas;
+    private List<Notes> notas;
     private LayoutInflater inflater;
 
-    public GradeAdapter(Context context, List<Nota> notas) {
+    public GradeAdapter(Context context, List<Notes> notas) {
         this.context = context;
         this.notas = notas;
         this.inflater = LayoutInflater.from(context);
@@ -93,4 +81,4 @@ public class GradeAdapter extends RecyclerView.Adapter<GradeAdapter.GradeViewHol
         this.notas = notas;
         notifyDataSetChanged();
     }
-}
+*/}

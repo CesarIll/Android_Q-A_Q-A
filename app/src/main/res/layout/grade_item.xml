@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -17,34 +16,33 @@
             android:layout_height="25sp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
+            android:ellipsize="marquee"
             android:paddingStart="12dp"
-            android:textColor="@color/colorAccent"
-            android:textSize="19dp"
             android:singleLine="true"
-            android:ellipsize="marquee"/>
+            android:textColor="@color/colorAccent"
+            android:textSize="19dp" />
 
         <TextView
             android:id="@+id/docente"
             android:layout_width="115sp"
             android:layout_height="25sp"
             android:layout_below="@+id/materia"
+            android:ellipsize="marquee"
             android:paddingStart="13dp"
-            android:textColor="@color/colorAccent"
-            android:textSize="17dp"
             android:singleLine="true"
-            android:ellipsize="marquee"/>
+            android:textColor="@color/colorAccent"
+            android:textSize="17dp" />
 
         <TextView
             android:id="@+id/horario"
             android:layout_width="115sp"
             android:layout_height="20sp"
             android:layout_below="@+id/docente"
-            android:paddingStart="14dp"
-            android:textColor="@color/colorAccent"
-            android:textSize="15dp"
-            android:singleLine="true"
             android:ellipsize="marquee"
-            />
+            android:paddingStart="14dp"
+            android:singleLine="true"
+            android:textColor="@color/colorAccent"
+            android:textSize="15dp" />
 
         <TableLayout
             android:layout_width="224dp"

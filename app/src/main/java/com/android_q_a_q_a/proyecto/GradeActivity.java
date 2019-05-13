@@ -1,5 +1,5 @@
 package com.android_q_a_q_a.proyecto;
-
+/*
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -63,5 +63,50 @@ public class GradeActivity extends AppCompatActivity {
 
     private void updateList() {
         adapter.setList(controller.showNotas());
+    }
+}
+*/
+
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
+
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.List;
+
+public class GradeActivity extends AppCompatActivity {
+
+    private RecyclerView mRecyclerView;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_grade);
+        mRecyclerView = (RecyclerView) findViewById(R.id.listViewGrades);
+
+        new FirebaseDatabaseHelper().readNotes(new FirebaseDatabaseHelper.DataStatus() {
+            @Override
+            public void DataIsLoaded(List<Notes> notes, List<String> keys) {
+                new RecyclerView_Config().setConfig(mRecyclerView,GradeActivity.this,notes,keys);
+            }
+
+            @Override
+            public void DataIsInserted() {
+
+            }
+
+            @Override
+            public void DataIsUpdated() {
+
+            }
+
+            @Override
+            public void DataIsDeleted() {
+
+            }
+        });
     }
 }

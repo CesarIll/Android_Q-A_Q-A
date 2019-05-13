@@ -1,5 +1,5 @@
 package com.android_q_a_q_a.proyecto.controllers;
-
+/*
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -11,9 +11,9 @@ import com.android_q_a_q_a.proyecto.model.Nota;
 
 import java.util.LinkedList;
 import java.util.List;
-
-public class DbController extends SQLiteOpenHelper {
-
+*/
+public class DbController  {
+/*
     public DbController(Context context,String name,SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
@@ -66,5 +66,5 @@ public class DbController extends SQLiteOpenHelper {
             e.printStackTrace();
             return null;
         }
-    }
+    }*/
 }
