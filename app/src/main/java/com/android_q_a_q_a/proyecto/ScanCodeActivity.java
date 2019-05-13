@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.CalendarView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,7 +16,7 @@ public class ScanCodeActivity extends AppCompatActivity  implements ZXingScanner
 
     ZXingScannerView ScannerView;
     TextView textView;
-
+    CalendarView calendarView;
     String verdad = "SiMarcoAsistencia";
 
     @Override
@@ -34,7 +35,6 @@ public class ScanCodeActivity extends AppCompatActivity  implements ZXingScanner
         AssistanceActivity.resultQR.setText(result.getText());
         onBackPressed();
          MarcoAsistencia();
-
     }
 
     @Override

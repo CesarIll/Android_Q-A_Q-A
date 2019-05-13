@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@color/colorBackGround"
+    android:background="@color/colorPrimaryDarker"
     android:weightSum="15"
     tools:context=".AssistanceActivity">
 
@@ -51,11 +51,10 @@
         android:layout_height="wrap_content">
 
         <CalendarView
-            android:id="@+id/calendarView"
-            android:layout_width="wrap_content"
-            android:layout_height="320dp">
+        android:id="@+id/calendarView"
+        android:layout_width="wrap_content"
+        android:layout_height="320dp"/>
 
-        </CalendarView>
 
     </LinearLayout>
 
