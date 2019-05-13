@@ -51,7 +51,7 @@ public class RecyclerView_Config {
             mnotafinal.setText(note.getResultado());
             mmateria.setText(note.getN_materia());
             this.key = key;
-
+            mmateria.setSelected(true);
         }
 
 
