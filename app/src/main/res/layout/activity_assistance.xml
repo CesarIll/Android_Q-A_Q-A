@@ -51,11 +51,10 @@
         android:layout_height="wrap_content">
 
         <CalendarView
-            android:id="@+id/calendarView"
-            android:layout_width="wrap_content"
-            android:layout_height="320dp">
+        android:id="@+id/calendarView"
+        android:layout_width="wrap_content"
+        android:layout_height="320dp"/>
 
-        </CalendarView>
 
     </LinearLayout>
     <TextView
